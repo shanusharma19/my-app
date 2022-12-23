@@ -13,6 +13,12 @@ function warningNotification (){
 	theme: 'red',
 	closeButton:"X",
 	})
+	Notification.requestPermission().then(prem => {
+          if(prem ==='granted')
+		  {
+               new Notification("hi");
+		  }
+	})
 };
 
 function successNotification (){
